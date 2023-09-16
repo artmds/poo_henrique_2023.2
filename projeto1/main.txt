@@ -1,0 +1,71 @@
+
+classe Pontos(){
+    privado inteiro pontoA;
+    privado inteiro pontoB;
+    privado inteiro pontoC;
+    privado inteiro pontoD;
+
+    publico metodo inserirPonto (){
+        retorna inteiro pontoA, pontoB, pontoC, pontoD;
+    }
+}
+
+classe Quadrado herda Pontos(){
+    inteiro lado
+
+    inteiro calculaArea(lado){
+        retorna lado ^ 2
+    }
+}
+
+
+classe Retangulo herda Pontos (){
+
+    publico calculaRetangulo(){
+        retorna (base * altura)
+    }
+}
+
+classe Circulo(){
+    privado inteiro raio
+    privado constante pi = 3.14
+
+    inteiro calculaRaio(){
+        retorna pi * raio ^ 2;
+    }
+}
+
+classe Triangulo() herda Pontos{ 
+    
+    publico calculaTriangulo(pontoA, pontoB, pontoC){
+        base = pontoA + pontoB;
+        altura = pontoA + pontoC;
+
+        retorna (base * altura) / 2
+    }
+}
+
+
+classe Main (){
+    print("Olá, esse é um programa que registra formas geométricas básicas e faz cálculos básicos!")
+    
+    novosPontos = Pontos()
+    novosPontos.pontoA = 2;
+    novosPontos.pontoB = 2;
+    novosPontos.pontoC = 2;
+    novosPontos.pontoD = 2;
+
+    novoQuadrado = Quadrado()
+    novoQuadrado.lado = 2
+    novoQuadrado.calculaArea(lado) // retorna area do quadrado
+
+    novoRetangulo = Retangulo()
+    novoRetangulo.pontoA
+
+
+    novoTriangulo = Triangulo()
+    novoTriangulo.calculaTriangulo()
+
+    novoCirculo = Circulo()
+    novoCirculo.calculaRaio(4) //insira o raio do circulo
+}
